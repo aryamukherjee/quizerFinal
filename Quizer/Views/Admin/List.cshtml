@@ -1,0 +1,75 @@
+﻿@model AdminListViewModel
+@{ 
+    ViewBag.Title = "Manage Quizes";
+    Layout = "_Layout";
+    var msg = TempData["message"];
+}
+<div class="container">
+
+    @if (msg != null)
+    {
+        <script type="text/javascript">
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
+        toastr.success('@msg');
+        
+        </script>
+    }
+    @if (Model.Quizes.Count() > 0)
+    {
+        @foreach (var item in Model.Quizes)
+        {
+            <div class="card card-outline-primary m-1 p-1">
+                <div class="card-body">
+                    <h4 class="card-title">
+                        @item.Title
+                    </h4>
+                    <h6 class="card-subtitle mb-2 text-muted">Total Points: @item.TotalPoints</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Due Date: @item.DueDate</h6>
+                    <p class="card-text">@item.Description</p>
+                </div>
+                <div class="card-footer">
+                    <form asp-action="Delete" method="post">
+                        <a asp-action="Edit" class="btn btn-warning" asp-route-quizId="@item.QuizID">
+                            Edit
+                        </a>
+                        <input type="hidden" name="QuizID" value="@item.QuizID" />
+                        <button type="submit" class="btn btn-danger">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+            </div>
+        }
+
+        <div page-model="@Model.PagingInfo" page-action="List"
+             page-classes-enabled="true" page-class="btn" page-class-normal="btn-secondary"
+             page-class-selected="btn-primary" class="btn-group pull-right m-1">
+
+        </div>
+    }
+    else
+    {
+        <h1 class="text-muted" style="text-align:center; margin-top:150px">No Quiz to display. Please create one.</h1>
+
+    }
+
+
+</div>

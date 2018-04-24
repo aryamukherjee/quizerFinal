@@ -1,0 +1,22 @@
+﻿@model QuizesListViewModel
+
+@if (Model.Quizes.Count() > 0)
+{
+    <div class="container">
+        @foreach (var p in Model.Quizes)
+        {
+            @Html.Partial("_QuizSummary", p)
+        }
+
+        <div page-model="@Model.PagingInfo" page-action="List"
+             page-classes-enabled="true" page-class="btn" page-class-normal="btn-secondary"
+             page-class-selected="btn-primary" class="btn-group pull-right m-1">
+
+        </div>
+    </div>
+}
+else
+{
+    <h1 class="text-muted" style="text-align:center; margin-top:150px">No Quiz to display.</h1>
+
+}

@@ -1,0 +1,48 @@
+﻿@model LoginModel
+@{
+    Layout = "_LoginLayout";
+    var msg = TempData["error"];
+}
+@if (msg != null)
+{
+    <script type="text/javascript">
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
+        toastr.error('@msg');
+
+    </script>
+}
+<div class="card border-info mb-3" style="max-width: 30rem;">
+    <h3 class="card-header">Admin Login</h3>
+    <div class="card-body">
+        <form asp-action="Login" method="post">
+            <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+            </div>
+            <button class="btn btn-primary" type="submit">Log In</button>
+        </form>
+    </div>
+</div>

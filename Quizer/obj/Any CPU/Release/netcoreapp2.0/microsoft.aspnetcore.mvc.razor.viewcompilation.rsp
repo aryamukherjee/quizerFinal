@@ -1,0 +1,18 @@
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer
+--output-path=obj\Any CPU\Release\netcoreapp2.0\
+--application-name=Quizer
+--content-root=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Account\Login.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Admin\Create.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Admin\Edit.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Admin\List.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Quiz\Grades.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Quiz\List.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Quiz\TakeQuiz.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Shared\_AdminNavBar.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Shared\_Layout.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Shared\_LoginLayout.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Shared\_QuizSummary.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\Shared\_StudentNavBar.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\_ViewImports.cshtml
+--file=C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\Views\_ViewStart.cshtml

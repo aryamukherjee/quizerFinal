@@ -1,0 +1,162 @@
+﻿@model TakeQuizViewModel
+@{
+    ViewBag.Title = "Take Quiz";
+    Layout = "_Layout";
+    var i = 1;
+}
+
+<style>
+    h4 {
+        text-align: center;
+        font-size: 60px;
+        margin-top: 0px;
+        color: grey;
+        font-family: "Verdana", sans-serif;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row"  style="margin:10px 10px">
+        <div class="col-8" style="border-right: 1px solid grey">
+            <div id="quizDetails" class="jumbotron">
+                <input type="hidden" id="quizIdHidden" data-bind="value: quizIdHidden" value="@Model.Quiz.QuizID"/>
+                <h2>Quiz: @Model.Quiz.Title</h2>
+                <p class="mb-0 lead">@Model.Quiz.Description</p>
+                <hr class="my-4">
+                <h6 class="text-muted">Total Points: @Model.Quiz.TotalPoints</h6>
+            </div>
+            <div id="questions">
+                @foreach(var q in Model.Questions)
+                {
+                <div class="questions" id="questions+@i">
+                    <input type="hidden" id="questionIdHidden_+@i" value="@q.QuestionID" />
+                    <input type="hidden" id="questionTypeHidden_+@i" value="@q.QuestionType" />
+                    <input type="hidden" id="questionPointsHidden_+@i" value="@q.Points" />
+                    <input type="hidden" id="questionCorrectAnsHidden_+@i" value="@q.CorrectAnswer" />
+                    <h3>Question @i</h3>
+                    <p class="mb-0">@q.QuestionText</p>
+                    <div class="answers">
+                        @if (q.QuestionType == "MCQ")
+        {
+                <div class="form-group">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="answerq+@i+_1" name="MCQanswers+@i" class="custom-control-input" value="1">
+                        <label class="custom-control-label" for="answerq+@i+_1">@q.MCQAnswer1</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="answerq+@i+_2" name="MCQanswers+@i" class="custom-control-input" value="2">
+                        <label class="custom-control-label" for="answerq+@i+_2">@q.MCQAnswer2</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="answerq+@i+_3" name="MCQanswers+@i" class="custom-control-input" value="3">
+                        <label class="custom-control-label" for="answerq+@i+_3">@q.MCQAnswer3</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" id="answerq+@i+_4" name="MCQanswers+@i" class="custom-control-input" value="4">
+                        <label class="custom-control-label" for="answerq+@i+_4">@q.MCQAnswer4</label>
+                    </div>
+                </div>
+}
+else
+{
+                <div class="form-group">
+                    <label for="answerq+@i+_txt">Write your answer below</label>
+                    <textarea class="form-control" id="answerq+@i+_txt" rows="4"></textarea>
+                </div>
+
+}
+                    </div>
+                </div>
+                    i++;
+                }
+            </div>
+            <button type="button" id="submitQuiz" class="btn btn-success">Submit Quiz</button>
+        </div>
+        <div class="col-4" style="position: fixed; top:100px; right:0;">
+            <h4 id="timer"></h4>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    Date.prototype.addHours = function(h) {
+       this.setTime(this.getTime() + (h*60*60*1000));
+       return this;
+    }
+    var countDownDate = new Date().addHours(1).getTime();
+
+    var x = setInterval(function() {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("timer").innerHTML = "Time Remaining: " + minutes + "m " + seconds + "s";
+
+        if (distance < 0) {
+            clearInterval(x);
+            //if time is over, then sumit the quiz automatically
+            $("#submitQuiz").addClass("disabled");
+            submitQuiz();
+        }
+    }, 1000);
+
+    $("#submitQuiz").click(function () {
+        submitQuiz();
+
+    })
+    })
+
+    function submitQuiz()
+    {
+        var vm = [];
+        var quizId = $("#quizDetails").find("input:hidden").val();
+
+        var i = 1;
+        $("#questions").find("div.questions").each(function () {
+
+            var questionId = $(this).find("input:hidden[id='" + "questionIdHidden_+" + i + "']").val();
+            var questionType = $(this).find("input:hidden[id='" + "questionTypeHidden_+" + i + "']").val();
+            var questionPoints = $(this).find("input:hidden[id='" + "questionPointsHidden_+" + i + "']").val();
+            var questionCorrectAns = $(this).find("input:hidden[id='" + "questionCorrectAnsHidden_+" + i + "']").val();
+
+            var MCQAnswer;
+            var TextAnswer;
+            if (questionType == "MCQ") {
+                MCQAnswer = $(this).find("input:radio[name='" + "MCQanswers+" + i + "']:checked").val();
+
+            }
+            else
+            {
+                TextAnswer = $(this).find("textarea").val();
+
+            }
+            var data = {
+                QuestionID: questionId,
+                QuizID: quizId,
+                MCQAnswer: MCQAnswer,
+                TextAnswer: TextAnswer,
+                Points: questionPoints,
+                QType: questionType,
+                CorrectMCQAns: questionCorrectAns
+            }
+            vm.push(data);
+            i++;
+
+        })
+
+        $.ajax({
+            url: '@Url.Action("TakeQuiz", "Quiz")',
+            method: "post",
+            data: {
+                completedQuizes: vm
+            }
+        }).done(function (data, exc) {
+            window.location.href = "/Quiz/Grades";
+        });
+
+    }
+</script>

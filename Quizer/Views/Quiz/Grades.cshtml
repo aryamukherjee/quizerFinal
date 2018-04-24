@@ -1,0 +1,35 @@
+﻿@model IEnumerable<GradesViewModel>
+@{
+    ViewBag.Title = "Grades";
+    Layout = "_Layout";
+}
+
+@if (Model.Count() > 0)
+{
+    <div style="padding: 20px 20px 0px 20px">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Quiz Name</th>
+                    <th scope="col">Initial Grade</th>
+                    <th scope="col">Final Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var m in @Model)
+                {
+                    <tr class="table-light">
+                        <td>@m.Title</td>
+                        <td>@m.InitialGrade</td>
+                        <td>@m.FinalGrade</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <h1 class="text-muted" style="text-align:center; margin-top:150px">No Grades Available.</h1>
+
+}

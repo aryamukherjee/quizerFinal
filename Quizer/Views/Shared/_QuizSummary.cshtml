@@ -1,0 +1,25 @@
+﻿@model Quiz
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="card-body">
+        <h4 class="card-title">
+            @Model.Title
+        </h4>
+        <h6 class="card-subtitle mb-2 text-muted">Total Points: @Model.TotalPoints</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Due Date: @Model.DueDate</h6>
+        <p class="card-text">@Model.Description</p>
+    </div>
+    <div class="card-footer">
+        @if (@Model.Completed == 1)
+        {
+        <span class="badge badge-primary badge-pill">Completed</span>
+
+        }
+        else
+        {
+            <a asp-action="TakeQuiz" class="btn btn-success" asp-route-QuizID="@Model.QuizID">
+                Take Quiz
+            </a>
+        }
+    </div>
+</div>

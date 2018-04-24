@@ -1,0 +1,12 @@
+﻿.error{
+    display:block;
+    color: red;
+    font-weight:500;
+        
+}
+#helloAdmin {
+    color: white;
+    margin-right: 5px;
+    height: 21px;
+    line-height: 3.5
+}

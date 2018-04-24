@@ -1,0 +1,11 @@
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\bin\Debug\netcoreapp2.0\Quizer.deps.json
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\bin\Debug\netcoreapp2.0\Quizer.runtimeconfig.json
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\bin\Debug\netcoreapp2.0\Quizer.runtimeconfig.dev.json
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\bin\Debug\netcoreapp2.0\Quizer.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\bin\Debug\netcoreapp2.0\Quizer.pdb
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\obj\Debug\netcoreapp2.0\Quizer.csprojResolveAssemblyReference.cache
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\obj\Debug\netcoreapp2.0\Quizer.csproj.CoreCompileInputs.cache
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\obj\Debug\netcoreapp2.0\Quizer.AssemblyInfoInputs.cache
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\obj\Debug\netcoreapp2.0\Quizer.AssemblyInfo.cs
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\obj\Debug\netcoreapp2.0\Quizer.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer\obj\Debug\netcoreapp2.0\Quizer.pdb

@@ -1,0 +1,16 @@
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.Tests.deps.json
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.Tests.runtimeconfig.json
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.Tests.runtimeconfig.dev.json
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.Tests.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.Tests.pdb
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\bin\Debug\netcoreapp2.0\Quizer.pdb
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\obj\Debug\netcoreapp2.0\Quizer.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\obj\Debug\netcoreapp2.0\Quizer.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\obj\Debug\netcoreapp2.0\Quizer.Tests.AssemblyInfoInputs.cache
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\obj\Debug\netcoreapp2.0\Quizer.Tests.AssemblyInfo.cs
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\obj\Debug\netcoreapp2.0\Quizer.Tests.dll
+C:\Users\Arya\Desktop\course material\DIS\ASP.NET Projects\Quizer\Quizer.Tests\obj\Debug\netcoreapp2.0\Quizer.Tests.pdb
