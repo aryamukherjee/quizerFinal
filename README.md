@@ -6,7 +6,7 @@ ASP .Net Core 2 Quizer App
 The app that I have built is an app for quiz administration by professors. The app is named Quizer.
 Professors can create, update and delete quizes and the students can take active quizes.
 There is also a grading section, where students can view grades for taken quizes.
-The interface is pretty simple, so navigation is seemless.
+The interface is pretty simple, so navigation is seamless.
 
 ====================================================================================================
 
